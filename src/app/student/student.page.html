@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Fiche étudiante</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="!!currentStudent">
+    <ion-card-header>
+      <ion-card-title>{{ currentStudent.name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Id : {{ currentStudent.id }}</p>
+      <p>Moyenne : {{ currentStudent.average }}</p>
+      <p>En alternance :
+        {{ currentStudent.alternant ? 'Oui' : 'Non' }}
+      </p>
+    </ion-card-content>
+    <ion-button size="small" (click)="onHome()" color="primary">Accueil</ion-button>
+  </ion-card>
+
+</ion-content>
